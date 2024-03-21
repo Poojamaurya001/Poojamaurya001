@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation </title>
+</head>
+<style>
+    span{
+        color:rgb(174, 169, 169);
+        text-shadow:0 0 10px rgb(154, 159, 159) ;
+    }
+    span::after{
+        content:' Get help logging in.';
+        color: rgb(64, 64, 160);
+        text-shadow:0 0 10px rgb(17, 41, 121) ;
+    }
+   form{
+    height: 60vh;
+    width: 35vw;
+    background-color:black;
+    margin-top:none;
+    margin-left: 50vh;
+   }
+   form h1{
+    color: rgb(210, 216, 216);
+    font-style: normal;
+    text-shadow:0 0 10px rgb(65, 67, 67) ;
+   }
+   form .container{
+    margin: 15vh;
+   }
+   form input{
+    height: 5vh;
+    width: 15vw;
+    background-color: rgb(188, 185, 185);
+    color: black;
+    border: none;
+    border-radius:8px ;
+    font-size: 20px;
+   }
+   form input::placeholder{
+    font-size: 15px;
+    color: rgba(44, 43, 43, 0.877);
+   }
+   form button{
+    height: 5vh;
+    width: 15vw;
+    background:linear-gradient(to left,rgb(30, 30, 117),rgb(129, 122, 122),rgb(30, 30, 117));
+    color: azure;
+    font-size: 25px;
+    border-radius: 8px;
+   }
+   form h2{
+    color: rgb(19, 107, 201);
+    font-size: 25px;
+    text-shadow:0 0 10px rgb(15, 162, 176) ;
+   }
+   form img{
+    height: 25px;
+    width: 25px;
+    
+   }
+   err{
+    color: red;
+   }
+   body{
+    background:linear-gradient(to left,rgb(30, 30, 117),rgb(129, 122, 122),rgb(30, 30, 117));
+   }
+   #login:active{
+    transform: scale(0.8);
+
+   }
+</style>
+<body>
+        
+    <form onsubmit="return validationForm()">
+        <div class="container">
+        <h1>User login</h1>
+        <input type="text" placeholder="Phone number,email or username" id="username" name="inp1"><br><br>
+        <input type="password" placeholder="password" id="password" name="inp2"><br><br>
+        <button id="login">Log in</button><br><br>
+        <err></err><br><br>
+        <span>Forgot your login details?</span><br><br>
+        <hr><br><br>
+        <h2><img src="Facebook_Logo_(2019).png" href="www.facebook.com"> Log in with Facebook</h2>
+        </div>
+    
+       
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
